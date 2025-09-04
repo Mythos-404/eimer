@@ -8,24 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server-win64-3.13.7.zip",
+            "url": "https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server_win64-3.13.7.zip",
             "hash": "489f6f02b336f80812ad0307897e072c37042d1c39341e4efbe7c09d1e100f59",
-            "shortcuts": [
-                [
-                    "ts3server.exe",
-                    "TeamSpeak 3 - Server"
-                ]
-            ]
+            "shortcuts": [["ts3server.exe", "TeamSpeak 3 - Server"]]
         },
         "32bit": {
-            "url": "https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server-win32-3.13.7.zip",
+            "url": "https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server_win32-3.13.7.zip",
             "hash": "03ec18e7700d0884d09e6cbb9419cc8ea80736bf5ac82582941bbe8dc81f3d52",
-            "shortcuts": [
-                [
-                    "ts3server.exe",
-                    "TeamSpeak 3 - Server"
-                ]
-            ]
+            "shortcuts": [["ts3server.exe", "TeamSpeak 3 - Server"]]
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
@@ -37,14 +27,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://files.teamspeak-services.com/releases/server/$version/teamspeak3-server-win64-$version.zip",
+                "url": "https://files.teamspeak-services.com/releases/server/$version/teamspeak3-server_win64-$version.zip",
                 "hash": {
                     "url": "https://www.teamspeak.com/en/downloads",
                     "regex": "(?sm)Windows.*?Server 64-bit.*?$sha256"
                 }
             },
             "32bit": {
-                "url": "https://files.teamspeak-services.com/releases/server/$version/teamspeak3-server-win32-$version.zip",
+                "url": "https://files.teamspeak-services.com/releases/server/$version/teamspeak3-server_win32-$version.zip",
                 "hash": {
                     "url": "https://www.teamspeak.com/en/downloads",
                     "regex": "(?sm)Windows.*?Server 32-bit.*?$sha256"
