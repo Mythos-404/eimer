@@ -1,0 +1,36 @@
+{
+    "version": "0.1.0",
+    "description": "A faster and better Scoop bucket search tool",
+    "homepage": "https://github.com/Mythos-404/better_scoop_search",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Mythos-404/better_scoop_search/releases/download/v0.1.0/better_scoop_search-windows-x86_64.exe",
+            "hash": "19a4a218a6033b44ef5d3e907b85d4a94eaadf61d90ffe6d9c536bc3c99d2813"
+        }
+    },
+    "bin": [
+        [
+            "better_scoop_search-windows-x86_64.exe",
+            "better_scoop_search"
+        ],
+        [
+            "better_scoop_search-windows-x86_64.exe",
+            "better-scoop-search"
+        ],
+        [
+            "better_scoop_search-windows-x86_64.exe",
+            "bss"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Mythos-404/better_scoop_search"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Mythos-404/better_scoop_search/releases/download/v$version/better_scoop_search-windows-x86_64.exe"
+            }
+        }
+    }
+}
