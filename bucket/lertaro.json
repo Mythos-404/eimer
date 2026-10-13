@@ -8,26 +8,30 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.9.4/Lertaro-Setup.exe",
-            "hash": "fb2a10ad076200ae78e6c5a786cb55c5d36201c14ee2e0f343878387bf7b2efc"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.9.4/Lertaro-Portable.zip",
+            "hash": "aab5602d90ac19cce1ca170caf6e786c42e98d0eac4e15f2dd7a6c9cda944475"
         },
         "arm64": {
-            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.9.4/Lertaro-Setup-arm64.exe",
-            "hash": "3bc6dfdf7791625ab51066b9f65e1b261d3ae40558f711eba97137ee2674d6e2"
+            "url": "https://github.com/Lertaro/Lertaro/releases/download/v5.9.4/Lertaro-Portable-arm64.zip",
+            "hash": "c87acf593a3b7f923bbef6921fc1f262b964d2e64c350cfde1d78272c9efef95"
         }
     },
-    "innosetup": true,
-    "bin": [
-        [
-            "Lertaro.App.exe",
-            "Lertaro"
-        ]
-    ],
+    "extract_dir": "Lertaro",
+    "bin": "lff.exe",
     "shortcuts": [
         [
             "Lertaro.App.exe",
             "Lertaro"
         ]
+    ],
+    "persist": "Data",
+    "uninstaller": {
+        "file": "portable-cleanup.bat"
+    },
+    "notes": [
+        "The background indexing service (LertaroService) requires administrator rights to register and locks its install folder, which conflicts with Scoop's 'current' junction; service installation from a Scoop install may fail.",
+        "For the background service, install the official Lertaro-Setup.exe to Program Files instead.",
+        "The portable build needs the .NET 10 Windows Desktop Runtime; run install-dotnet-runtime.bat in the app folder to install it."
     ],
     "checkver": {
         "github": "https://api.github.com/repos/Lertaro/Lertaro/releases",
@@ -37,10 +41,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable.zip"
             },
             "arm64": {
-                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Setup-arm64.exe"
+                "url": "https://github.com/Lertaro/Lertaro/releases/download/v$version/Lertaro-Portable-arm64.zip"
             }
         }
     }
